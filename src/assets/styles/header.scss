@@ -1,0 +1,11 @@
+header {
+  nav {
+    a {
+      color: $title-color !important;
+
+      .active, &:Hover {
+        color: $main-color !important;
+      }
+    }
+  }
+}
