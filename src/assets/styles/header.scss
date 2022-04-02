@@ -1,4 +1,8 @@
 header {
+  .logo {
+    width: 130px;
+  }
+
   nav {
     a {
       color: $title-color !important;
@@ -8,4 +12,14 @@ header {
       }
     }
   }
+}
+
+@media screen and (max-width: 1260px){
+
+  header {
+    .logo {
+      width: 110px;
+    }
+  }
+
 }

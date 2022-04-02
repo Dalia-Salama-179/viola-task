@@ -93,12 +93,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.v-carousel {
-  border-radius: 12px;
-}
-
 .home-slider {
   ::v-deep {
+    .v-carousel {
+      border-radius: 12px;
+    }
+
     .v-carousel__controls__item {
       .mdi:before {
         font-size: 48px;
