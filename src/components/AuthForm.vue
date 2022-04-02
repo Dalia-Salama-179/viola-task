@@ -38,7 +38,7 @@
     <div class="auth-or mb-10">
       <span>OR</span>
     </div>
-    <div class="d-flex justify-center flex-wrap mb-4 mb-md-11">
+    <div class="d-flex justify-center flex-wrap mb-4 mb-md-11 btns-wrapper">
       <google-button class="mx-1" />
       <facebook-button class="mx-1" />
     </div>
@@ -86,41 +86,6 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-.auth-or {
-  span {
-    position: relative;
-    color: rgba(#000000, 0.3);
-
-    &:after, &:before {
-      content: '';
-      position: absolute;
-      width: 146px;
-      height: 1px;
-      background-color: rgba(#29B2FE, 0.14);
-      border-radius: 8px;
-      top: 10px;
-    }
-
-    &:before {
-      left: 22px;
-    }
-
-    &:after {
-      right: 22px;
-    }
-
-  }
-}
-
-@media screen and (max-width: 600px){
-  .auth-or {
-    span {
-      &:after, &:before {
-        width: 70px;
-      }
-    }
-  }
-}
+<style scoped lang="scss" src="../assets/styles/auth-form.scss">
 
 </style>

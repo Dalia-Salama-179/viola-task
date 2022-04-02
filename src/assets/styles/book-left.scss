@@ -8,11 +8,19 @@
   img {
     width: 200px;
   }
+
+  .page-main-text {
+    width: 85%;
+  }
 }
 
 @media screen and (max-width: 960px){
   .book-left {
     .book-desc {
+      width: 100%;
+    }
+
+    .page-main-text {
       width: 100%;
     }
   }

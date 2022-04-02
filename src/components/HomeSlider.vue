@@ -1,11 +1,12 @@
 <template>
   <v-carousel class="home-slider"
-      :continuous="false"
-      :cycle="cycle"
-      :show-arrows="false"
-      hide-delimiter-background
-      delimiter-icon="mdi-minus"
-      :height="height"
+              :continuous="true"
+              :cycle="true"
+              interval="2000"
+              :show-arrows="false"
+              hide-delimiter-background
+              delimiter-icon="mdi-minus"
+              :height="height"
   >
     <v-carousel-item
         v-for="(slide, i) in data"
@@ -16,11 +17,11 @@
       <div class="full-height d-flex align-center slider-content">
         <v-row>
           <v-col cols="12" lg="8" xl="6">
-            <p class="text-xxl white-text">{{slide.title}}</p>
-            <p class="sub-title white-text mb-8">{{slide.description}}</p>
+            <p class="text-xxl white-text">{{ slide.title }}</p>
+            <p class="sub-title white-text mb-8">{{ slide.description }}</p>
             <v-btn elevation="false" class="sub-title-s text-capitalize"
                    :width="$vuetify.breakpoint.mdAndUp? '242': '180'" height="46">
-              {{slide.action.label}}
+              {{ slide.action.label }}
             </v-btn>
           </v-col>
         </v-row>
@@ -41,7 +42,6 @@ export default {
         'red lighten-2',
         'orange darken-1',
       ],
-      cycle: false,
       slides: [
         'First',
         'Second',
@@ -92,42 +92,5 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-.home-slider {
-  ::v-deep {
-    .v-carousel {
-      border-radius: 12px;
-    }
-
-    .v-carousel__controls__item {
-      .mdi:before {
-        font-size: 48px;
-        border-radius: 12px;
-      }
-
-      &:before {
-        display: none;
-      }
-
-      &.v-item--active {
-        i {
-          opacity: 1;
-        }
-      }
-    }
-  }
-
-  .slider-content {
-    padding: 70px;
-  }
-}
-
-@media screen and (max-width: 960px){
-
-  .home-slider {
-    .slider-content {
-      padding: 30px;
-    }
-  }
-}
+<style scoped lang="scss" src="../assets/styles/home-slider.scss">
 </style>

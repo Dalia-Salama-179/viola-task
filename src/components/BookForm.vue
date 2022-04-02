@@ -31,11 +31,12 @@
       <v-textarea outlined v-model="form.note"
                   hide-details
                   label="Note"
+                  no-resize
       >
       </v-textarea>
 
       <v-btn block color="primary" elevation="false" height="46" type="submit"
-             class="my-5 text-capitalize sub-title-s">Create Account
+             class="my-5 text-capitalize sub-title-s">Book Your Appointment
       </v-btn>
     </v-form>
 

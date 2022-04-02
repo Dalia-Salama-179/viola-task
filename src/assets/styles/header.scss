@@ -3,6 +3,10 @@ header {
     width: 130px;
   }
 
+  &.shadow {
+    box-shadow: 0 3px 6px rgba(#000000, 0.16);
+  }
+
   nav {
     a {
       color: $title-color !important;
@@ -18,7 +22,7 @@ header {
 
   header {
     .logo {
-      width: 110px;
+      width: 100px;
     }
   }
 

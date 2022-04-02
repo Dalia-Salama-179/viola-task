@@ -1,5 +1,5 @@
 <template>
-  <header class="py-9">
+  <header class="py-9" :class="{'shadow': $route.meta.shadow}">
     <v-container fluid class="py-0 d-flex justify-space-between align-center">
       <router-link to="/">
         <img src="@/assets/images/logo.svg" alt="" class="logo">
@@ -17,14 +17,17 @@
         </router-link>
       </nav>
 
-      <div class="d-none d-md-block">
+      <div class="d-none d-md-flex align-center">
+        <a>
+          <img src="@/assets/images/Search.svg" alt="search" class="mr-2 mr-lg-7" :width="$vuetify.breakpoint.lgAndUp? 38: 28">
+        </a>
         <v-btn v-if="!user"
                class="white-text sub-title-s" color="primary"
                :width="$vuetify.breakpoint.lgAndUp? '240': '120'" height="46" elevation="false"
                to="/auth">LOGIN</v-btn>
         <v-btn v-else
                class="white-text sub-title-s text-capitalize" color="primary"
-               :width="$vuetify.breakpoint.lgAndUp? '240': '200'" height="46" elevation="false"
+               :width="$vuetify.breakpoint.lgAndUp? '240': '190'" height="46" elevation="false"
                to="/book-appointment">Book an Appointment
         </v-btn>
       </div>

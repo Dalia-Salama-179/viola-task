@@ -1,7 +1,7 @@
 <template>
   <div class="book-left">
-    <p class="text-xxl title-color">
-      Just one Step and you can <br /> Book your Appointment
+    <p class="text-xxl title-color page-main-text">
+      Just one Step and you can Book your Appointment
     </p>
     <p class="sub-title main-color-text mb-4">
       2 free consultation visits after the first diagnoses visit

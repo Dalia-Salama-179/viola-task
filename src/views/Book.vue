@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="py-0">
+  <v-container fluid class="pt-8 min-height-100 d-flex align-center">
     <v-row class="justify-space-between booking-page">
       <v-col cols="12" md="6" lg="7">
         <book-left/>

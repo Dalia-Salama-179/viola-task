@@ -40,7 +40,8 @@ const routes = [
       }
     },
     meta: {
-      layout: 'default'
+      layout: 'default',
+      shadow: true
     }
   },
 ]
