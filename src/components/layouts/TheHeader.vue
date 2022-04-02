@@ -1,13 +1,17 @@
 <template>
   <header class="py-9">
     <v-container fluid class="py-0 d-flex justify-space-between align-center">
-      <img src="@/assets/images/logo.svg" alt="" class="logo">
+      <router-link to="/">
+        <img src="@/assets/images/logo.svg" alt="" class="logo">
+      </router-link>
 
 
       <nav class="sub-title-s d-none d-md-block">
         <router-link class="mx-2 mx-lg-4"
                      v-for="(page, index) in pages"
                      :key="index"
+                     exact
+                     :class="{'active': $route.name === page.name}"
                      :to="page.link">
           {{ page.name }}
         </router-link>

@@ -1,0 +1,19 @@
+@import "variables";
+.book-left {
+  .book-desc {
+    color: $sub-title;
+    width: 50%;
+  }
+
+  img {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 960px){
+  .book-left {
+    .book-desc {
+      width: 100%;
+    }
+  }
+}

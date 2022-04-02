@@ -5,6 +5,7 @@
 
 a {
   text-decoration: none !important;
+  transition: all ease-in-out 0.2s;
 }
 
 .container--fluid {
@@ -69,6 +70,10 @@ a {
   color: $light-gray;
 }
 
+.placeholder-color {
+  color: $placeholder;
+}
+
 .v-text-field--outlined fieldset {
   color: $border-color !important;
 }
@@ -77,19 +82,29 @@ a {
   flex: 1;
 }
 
+.v-text-field--outlined fieldset {
+  background-color: #ffffff;
+}
+
+
+.theme--light.v-label {
+  color: rgba(38, 38, 39, 0.62) !important;
+  font-family: 'ApercuLight' !important;
+}
+
 @media  (min-width: 1264px) {
   html {
     font-size: 16px !important;
   }
 }
 
-@media (max-width: 1263px) and (min-width: 960px) {
+@media (max-width: 1264px) and (min-width: 960px) {
   html {
     font-size: 14px !important;
   }
 
   .text-xxl {
-    font-size: 45px;
+    font-size: 40px;
   }
 }
 

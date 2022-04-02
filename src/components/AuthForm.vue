@@ -1,37 +1,37 @@
 <template>
   <div class="auth-form">
 
-    <img src="@/assets/images/logo-vertical.svg" alt="">
+    <router-link to="/">
+      <img src="@/assets/images/logo-vertical.svg" alt="">
+    </router-link>
     <p class="main-color-text text-xl mb-3">Create Your Account</p>
     <p class="font-light main-title-m title-color">It’s Free!</p>
-    <v-form @submit.prevent="submit">
+    <v-form @submit.prevent="submit" ref="form">
       <v-text-field
-          class="mb-3"
           outlined
           label="Full name *"
           v-model="form.name"
-          hide-details
+          :rules="nameRules"
       >
       </v-text-field>
 
       <v-text-field
-          class="mb-3"
           outlined
           label="Mobile number *"
           v-model="form.mobile"
-          hide-details
+          type="number"
+          :rules="mobileRules"
       ></v-text-field>
 
       <v-text-field
-          class="mb-3"
           outlined
           label="Email *"
           v-model="form.email"
-          hide-details
+          :rules="emailRules"
       ></v-text-field>
 
       <v-btn block color="primary" elevation="false" height="46" type="submit"
-             class="my-5 text-capitalize sub-title-s">Book an Appointment
+             class="my-5 text-capitalize sub-title-s">Create Account
       </v-btn>
     </v-form>
 
@@ -60,13 +60,27 @@ export default {
   components: {FacebookButton, GoogleButton},
   data() {
     return {
-      form: {}
+      form: {},
+      nameRules: [
+        v => !!v || 'Name is required',
+        v => (v && v.length > 10) || 'Name must be more than 10 characters',
+      ],
+      mobileRules: [
+        v => !!v || 'Mobile is required',
+        v => (v && v.length == 11) || 'Mobile must be 11 number',
+      ],
+      emailRules: [
+        v => !!v || 'E-mail is required',
+        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+      ],
     }
   },
   methods: {
     submit() {
-      localStorage.setItem('user', JSON.stringify(this.form))
-      this.$router.push('/')
+      if (this.$refs.form.validate()) {
+        localStorage.setItem('user', JSON.stringify(this.form))
+        this.$router.push('/')
+      }
     }
   }
 }

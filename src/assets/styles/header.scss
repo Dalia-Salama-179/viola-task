@@ -7,7 +7,7 @@ header {
     a {
       color: $title-color !important;
 
-      .active, &:Hover {
+      &.active, &:Hover {
         color: $main-color !important;
       }
     }
